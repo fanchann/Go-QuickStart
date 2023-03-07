@@ -1,0 +1,1 @@
+mv go-start /bin
