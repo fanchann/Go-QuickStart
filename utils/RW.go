@@ -24,14 +24,14 @@ func CreateFolderProject(name string, perm int) {
 }
 
 func CreateFile(location, pkgName, sourceCode, fileName string) error {
-	mysqlTemplate, err := template.New("").Parse(sourceCode)
+	codeTemplate, err := template.New("").Parse(sourceCode)
 	if err != nil {
 		return fmt.Errorf("failed to parse template: %v", err)
 	}
 
 	var tpl bytes.Buffer
 
-	if err = mysqlTemplate.Execute(&tpl, struct{ PackageName string }{pkgName}); err != nil {
+	if err = codeTemplate.Execute(&tpl, struct{ PackageName string }{pkgName}); err != nil {
 		return fmt.Errorf("failed to execute template: %v", err)
 	}
 
