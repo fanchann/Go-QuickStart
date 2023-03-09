@@ -5,8 +5,7 @@ start with `go-start -pkg=awesomeProject` and see a miracle come out
 ![image1](/img/quickstart.png)
 
 ## Installation
-if you use linux run `install.sh` with sudo\
-`sudo install.sh`
+`go install github.com/fanchann/Go-QuickStart`
 
 ## Structure folder
 ![image2](/img/folder.png)
