@@ -1,4 +1,4 @@
-module Go-BoilerPlateAPI
+module Go-QuickStart
 
 go 1.20
 

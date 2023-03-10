@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Go-BoilerPlateAPI/entity"
-	"Go-BoilerPlateAPI/utils"
+	"Go-QuickStart/entity"
+	"Go-QuickStart/utils"
 	"flag"
 	"os"
 

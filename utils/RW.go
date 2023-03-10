@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"Go-BoilerPlateAPI/entity"
+	"Go-QuickStart/entity"
 	"bytes"
 	"fmt"
 	"io/fs"
