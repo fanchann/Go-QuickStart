@@ -9,6 +9,6 @@ for linux:\
 `git clone https://github.com/fanchann/Go-QuickStart && cd Go-QuickStart && build -o bin/go-start && sudo mv bin/go-start /bin`
 
 ## Structure folder
-![image2](/img/folder.png)
+![image2](img/folder.png)
 
 ## Thanks !
