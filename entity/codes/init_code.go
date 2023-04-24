@@ -16,8 +16,6 @@ github.com/go-sql-driver/mysql v1.7.0/go.mod h1:OXbVy3sEdcQ2Doequ6Z5BW6fXNQTmx+9
 if you have not installed _mysql_ driver use:
 - _go get -u github.com/go-sql-driver/mysql_
 install additional packages to load _.env_
-- _go get github.com/joho/godotenv_
-	
 ~ enjoy
 `
 )

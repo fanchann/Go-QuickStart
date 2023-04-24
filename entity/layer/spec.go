@@ -1,20 +1,22 @@
 package layer
 
 import (
-	"Go-QuickStart/utils"
+	"Go-QuickStart/utils/helpers"
+	"fmt"
 )
 
 type (
 	FileSpec struct {
-		Location string
-		PkgName  string
-		ScCode   string
-		FileName string
+		Location    string
+		PackageName string
+		GoVersion   string
+		ScCode      string
+		FileName    string
 	}
 )
 
 var (
-	Keys = []string{
+	DomainKeys = []string{
 		"domain",
 		"modelsInDomain",
 		"domainInDomain",
@@ -50,19 +52,19 @@ var (
 	TestLayer = "tests"
 
 	Domain = map[string]interface{}{
-		"domain":                   utils.CreateLayer(utils.GetWorkingDirectory(), DomainLayer),
-		"modelsInDomain":           utils.CreateLayer(utils.GetWorkingDirectory(), DomainLayer, ModelsLayer),
-		"domainInDomain":           utils.CreateLayer(utils.GetWorkingDirectory(), DomainLayer, ModelsLayer, DomainLayer),
-		"webInDomain":              utils.CreateLayer(utils.GetWorkingDirectory(), DomainLayer, ModelsLayer, WebLayer),
-		"repoInDomain":             utils.CreateLayer(utils.GetWorkingDirectory(), DomainLayer, RepoLayer),
-		"usecaseInDomain":          utils.CreateLayer(utils.GetWorkingDirectory(), DomainLayer, ServicesLayer),
-		"infrastucture":            utils.CreateLayer(utils.GetWorkingDirectory(), InsfratuctureLayer),
-		"utilsInInfrastucture":     utils.CreateLayer(utils.GetWorkingDirectory(), InsfratuctureLayer, UtilsLayer),
-		"databaseInInfrastructure": utils.CreateLayer(utils.GetWorkingDirectory(), InsfratuctureLayer, DatabaseLayer),
-		"envInInfrastructure":      utils.CreateLayer(utils.GetWorkingDirectory(), InsfratuctureLayer, EnvLayer),
-		"interface":                utils.CreateLayer(utils.GetWorkingDirectory(), InterfaceLayer),
-		"controllerInInterface":    utils.CreateLayer(utils.GetWorkingDirectory(), InterfaceLayer, ControllerLayer),
-		"middlewareInInterface":    utils.CreateLayer(utils.GetWorkingDirectory(), InterfaceLayer, MiddlewareLayer),
-		"test":                     utils.CreateLayer(utils.GetWorkingDirectory(), TestLayer),
+		"domain":                   fmt.Sprintf("%s/%s", helpers.GetWorkingDirectory(), DomainLayer),
+		"modelsInDomain":           fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), DomainLayer, ModelsLayer),
+		"domainInDomain":           fmt.Sprintf("%s/%s/%s/%s", helpers.GetWorkingDirectory(), DomainLayer, ModelsLayer, DomainLayer),
+		"webInDomain":              fmt.Sprintf("%s/%s/%s/%s", helpers.GetWorkingDirectory(), DomainLayer, ModelsLayer, WebLayer),
+		"repoInDomain":             fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), DomainLayer, RepoLayer),
+		"usecaseInDomain":          fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), DomainLayer, ServicesLayer),
+		"infrastucture":            fmt.Sprintf("%s/%s", helpers.GetWorkingDirectory(), InsfratuctureLayer),
+		"utilsInInfrastucture":     fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InsfratuctureLayer, UtilsLayer),
+		"databaseInInfrastructure": fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InsfratuctureLayer, DatabaseLayer),
+		"envInInfrastructure":      fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InsfratuctureLayer, EnvLayer),
+		"interface":                fmt.Sprintf("%s/%s", helpers.GetWorkingDirectory(), InterfaceLayer),
+		"controllerInInterface":    fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InterfaceLayer, ControllerLayer),
+		"middlewareInInterface":    fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InterfaceLayer, MiddlewareLayer),
+		"tests":                    fmt.Sprintf("%s/%s", helpers.GetWorkingDirectory(), TestLayer),
 	}
 )
