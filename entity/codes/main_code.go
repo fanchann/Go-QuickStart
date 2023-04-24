@@ -4,8 +4,8 @@ const (
 	MainCode = `package main
 
 import (
-	"{{.PackageName}}/insfrastructure/database"
-	"{{.PackageName}}/insfrastructure/utils"
+	"{{.PackageName}}/infrastructure/database"
+	"{{.PackageName}}/infrastructure/utils"
 	"fmt"
 )
 	

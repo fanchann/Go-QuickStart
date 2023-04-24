@@ -5,7 +5,7 @@ const (
 
 import (
 	"database/sql"
-	"fanchann/api/insfrastructure/environments"
+	"{{.PackageName}}/infrastructure/environments"
 	"fmt"
 	"time"
 

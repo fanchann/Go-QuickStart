@@ -1,15 +1,19 @@
+# this for testing!
 version: "3.8"
 
 services:
   go-start:
    container_name: go-start
    image: "go-start:2.0.0"
+   restart: on-failure
+   depends_on: 
+   - mysql_db
    build:
     context: "."
     dockerfile: Dockerfile
    environment:
       DB_DRIVER: mysql
-      DB_AUTH_USERNAME:
+      DB_AUTH_USERNAME: root
       DB_AUTH_PASSWORD: root
       DB_NAME: information_schema
       DB_URL: 0.tcp.ap.ngrok.io
