@@ -1,14 +1,57 @@
-## Go QuickStart
-This is a mold for creating the REST API that I use, no need to change the code for database settings, just change the .env in the environment folder for database settings, oh yeah for version 1.0 this only supports mysql, maybe in the future I will make it support all databases.
-
+## Go QuickStart v 2.0
+Speed up to create your REST API!\
+This tool is to help you create REST API faster, you don't need to  manually configure the connection to the database anymore.\
 start with `go-start -pkg=awesomeProject` and see a miracle come out
-![image1](/img/quickstart.png)
 
 ## Installation
 for linux:\
-`git clone https://github.com/fanchann/Go-QuickStart && cd Go-QuickStart && build -o bin/go-start && sudo mv bin/go-start /bin`
+`git clone https://github.com/fanchann/Go-QuickStart && cd Go-QuickStart && go build -o bin/go-start && sudo mv bin/go-start /bin`
 
+## Configuration
+Set your environment variable
+### Linux
+`this tool is still the same as the previous version, still using mysql, maybe in xxxxx version will adopt some database`
+```
+export DB_DRIVER=mysql
+export DB_AUTH_USERNAME=<your username here>
+export DB_AUTH_PASSWORD=<your password here>
+export DB_NAME=<database target>
+export DB_URL=<database url>
+export DB_PORT=<database port>
+```
+### Example
+```
+export DB_DRIVER=mysql
+export DB_AUTH_USERNAME=root
+export DB_AUTH_PASSWORD=root
+export DB_NAME=local_production
+export DB_URL=127.0.0.1
+export DB_PORT=3306
+```
 ## Structure folder
-![image2](img/folder.png)
+```
+├── domain
+│   ├── models
+│   │   ├── domain
+│   │   └── web
+│   ├── repositories
+│   └── services
+├── go.mod
+├── go.sum
+├── infrastructure
+│   ├── database
+│   │   └── mysql.go
+│   ├── environments
+│   │   └── database.go
+│   └── utils
+│       └── error.go
+├── interface
+│   ├── controller
+│   └── middleware
+├── main.go
+├── README.md
+└── tests
+```
+
 
 ## Thanks !
