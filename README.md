@@ -30,27 +30,29 @@ export DB_PORT=3306
 ```
 ## Structure folder
 ```
-├── domain
-│   ├── models
-│   │   ├── domain
-│   │   └── web
-│   ├── repositories
-│   └── services
-├── go.mod
-├── go.sum
-├── infrastructure
-│   ├── database
-│   │   └── mysql.go
-│   ├── environments
-│   │   └── database.go
-│   └── utils
-│       └── error.go
-├── interface
-│   ├── controller
-│   └── middleware
-├── main.go
-├── README.md
-└── tests
+.
+|-- README.md
+|-- go.mod
+|-- go.sum
+|-- interface
+|   |-- controller
+|   `-- middleware
+|-- internal
+|   |-- models
+|   |   |-- domain
+|   |   `-- web
+|   |-- repositories
+|   `-- services
+|-- main.go
+|-- pkg
+|   |-- database
+|   |   `-- mysql.go
+|   |-- environments
+|   |   `-- database.go
+|   `-- utils
+|       `-- error.go
+`-- tests
+
 ```
 
 
