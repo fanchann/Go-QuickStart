@@ -2,7 +2,6 @@ package layer
 
 import (
 	"Go-QuickStart/utils"
-	"fmt"
 )
 
 type (
@@ -51,19 +50,19 @@ var (
 	TestLayer = "tests"
 
 	Domain = map[string]interface{}{
-		"domain":                   fmt.Sprintf("%s/%s", utils.GetTopDirectory(), DomainLayer),
-		"modelsInDomain":           fmt.Sprintf("%s/%s/%s", utils.GetTopDirectory(), DomainLayer, ModelsLayer),
-		"domainInDomain":           fmt.Sprintf("%s/%s/%s/%s", utils.GetTopDirectory(), DomainLayer, ModelsLayer, DomainLayer),
-		"webInDomain":              fmt.Sprintf("%s/%s/%s/%s", utils.GetTopDirectory(), DomainLayer, ModelsLayer, WebLayer),
-		"repoInDomain":             fmt.Sprintf("%s/%s/%s", utils.GetTopDirectory(), DomainLayer, RepoLayer),
-		"usecaseInDomain":          fmt.Sprintf("%s/%s/%s", utils.GetTopDirectory(), DomainLayer, ServicesLayer),
-		"infrastucture":            fmt.Sprintf("%s/%s", utils.GetTopDirectory(), InsfratuctureLayer),
-		"utilsInInfrastucture":     fmt.Sprintf("%s/%s/%s", utils.GetTopDirectory(), InsfratuctureLayer, UtilsLayer),
-		"databaseInInfrastructure": fmt.Sprintf("%s/%s/%s", utils.GetTopDirectory(), InsfratuctureLayer, DatabaseLayer),
-		"envInInfrastructure":      fmt.Sprintf("%s/%s/%s", utils.GetTopDirectory(), InsfratuctureLayer, EnvLayer),
-		"interface":                fmt.Sprintf("%s/%s", utils.GetTopDirectory(), InterfaceLayer),
-		"controllerInInterface":    fmt.Sprintf("%s/%s/%s", utils.GetTopDirectory(), InterfaceLayer, ControllerLayer),
-		"middlewareInInterface":    fmt.Sprintf("%s/%s/%s", utils.GetTopDirectory(), InterfaceLayer, MiddlewareLayer),
-		"test":                     fmt.Sprintf("%s/%s", utils.GetTopDirectory(), TestLayer),
+		"domain":                   utils.CreateLayer(utils.GetWorkingDirectory(), DomainLayer),
+		"modelsInDomain":           utils.CreateLayer(utils.GetWorkingDirectory(), DomainLayer, ModelsLayer),
+		"domainInDomain":           utils.CreateLayer(utils.GetWorkingDirectory(), DomainLayer, ModelsLayer, DomainLayer),
+		"webInDomain":              utils.CreateLayer(utils.GetWorkingDirectory(), DomainLayer, ModelsLayer, WebLayer),
+		"repoInDomain":             utils.CreateLayer(utils.GetWorkingDirectory(), DomainLayer, RepoLayer),
+		"usecaseInDomain":          utils.CreateLayer(utils.GetWorkingDirectory(), DomainLayer, ServicesLayer),
+		"infrastucture":            utils.CreateLayer(utils.GetWorkingDirectory(), InsfratuctureLayer),
+		"utilsInInfrastucture":     utils.CreateLayer(utils.GetWorkingDirectory(), InsfratuctureLayer, UtilsLayer),
+		"databaseInInfrastructure": utils.CreateLayer(utils.GetWorkingDirectory(), InsfratuctureLayer, DatabaseLayer),
+		"envInInfrastructure":      utils.CreateLayer(utils.GetWorkingDirectory(), InsfratuctureLayer, EnvLayer),
+		"interface":                utils.CreateLayer(utils.GetWorkingDirectory(), InterfaceLayer),
+		"controllerInInterface":    utils.CreateLayer(utils.GetWorkingDirectory(), InterfaceLayer, ControllerLayer),
+		"middlewareInInterface":    utils.CreateLayer(utils.GetWorkingDirectory(), InterfaceLayer, MiddlewareLayer),
+		"test":                     utils.CreateLayer(utils.GetWorkingDirectory(), TestLayer),
 	}
 )

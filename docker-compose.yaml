@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  go-start:
+   container_name: go-start
+   image: "go-start:1.0.0"
+   build:
+    context: "."
+    dockerfile: Dockerfile

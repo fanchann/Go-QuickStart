@@ -3,7 +3,7 @@ package codes
 const (
 	GoMod = `module {{.PackageName}}
 
-go 1.20
+go {{.GoVersion}}
 
 require (
 	github.com/go-sql-driver/mysql v1.7.0
