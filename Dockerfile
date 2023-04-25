@@ -21,5 +21,4 @@ RUN mv go-start /bin/
 WORKDIR /tests
 RUN go-start -pkg=awesome/api
 RUN go mod download
-RUN apt update -y && apt install tree -y && tree >> dir.txt && cat dir.txt
 CMD [ "go","run","main.go" ]
