@@ -5,7 +5,7 @@ start with `go-start -pkg=awesomeProject` and see a miracle come out
 
 ## Installation
 for linux:\
-`git clone https://github.com/fanchann/Go-QuickStart && cd Go-QuickStart && go build -o bin/go-start && sudo mv bin/go-start /bin`
+`git clone https://github.com/fanchann/Go-QuickStart && cd Go-QuickStart && go build -o bin/go-start main.go && sudo mv bin/go-start /bin`
 
 ## Configuration
 Set your environment variable
