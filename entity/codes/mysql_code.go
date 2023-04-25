@@ -5,7 +5,8 @@ const (
 
 import (
 	"database/sql"
-	"{{.PackageName}}/infrastructure/environments"
+
+	"{{.PackageName}}/pkg/environments"
 	"fmt"
 	"time"
 

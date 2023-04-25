@@ -22,11 +22,11 @@ func GenerateLayer() {
 	}
 
 	files := []layer.FileSpec{
-		{Location: layer.Domain["databaseInInfrastructure"].(string) + "/", PackageName: *packageName, ScCode: codes.MysqlConnection, FileName: "mysql.go"},
-		{Location: layer.Domain["utilsInInfrastucture"].(string) + "/", PackageName: *packageName, ScCode: codes.UtilsError, FileName: "error.go"},
+		{Location: layer.Domain["databaseInPackage"] + "/", PackageName: *packageName, ScCode: codes.MysqlConnection, FileName: "mysql.go"},
+		{Location: layer.Domain["utilsInPackage"] + "/", PackageName: *packageName, ScCode: codes.UtilsError, FileName: "error.go"},
 		{Location: helpers.GetWorkingDirectory(), PackageName: *packageName, GoVersion: helpers.GetGoVersion(), ScCode: codes.GoMod, FileName: "go.mod"},
 		{Location: helpers.GetWorkingDirectory(), PackageName: *packageName, ScCode: codes.GoSum, FileName: "go.sum"},
-		{Location: layer.Domain["envInInfrastructure"].(string) + "/", PackageName: *packageName, ScCode: codes.EnvVariable, FileName: "database.go"},
+		{Location: layer.Domain["envInPackage"] + "/", PackageName: *packageName, ScCode: codes.EnvVariable, FileName: "database.go"},
 		{Location: helpers.GetWorkingDirectory(), PackageName: "", ScCode: codes.Readme, FileName: "README.md"},
 		{Location: helpers.GetWorkingDirectory(), PackageName: *packageName, ScCode: codes.MainCode, FileName: "main.go"},
 	}
@@ -35,6 +35,6 @@ func GenerateLayer() {
 	defer newWrite.CreateFile(files)
 
 	for _, layered := range layer.DomainKeys {
-		newWrite.CreateFolderProject(layer.Domain[layered].(string), layer.Perm)
+		newWrite.CreateFolderProject(layer.Domain[layered], layer.Perm)
 	}
 }

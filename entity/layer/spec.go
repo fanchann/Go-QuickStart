@@ -23,27 +23,29 @@ var (
 		"webInDomain",
 		"repoInDomain",
 		"usecaseInDomain",
-		"infrastucture",
-		"utilsInInfrastucture",
-		"databaseInInfrastructure",
-		"envInInfrastructure",
+		"package",
+		"utilsInPackage",
+		"databaseInPackage",
+		"envInPackage",
 		"interface",
 		"controllerInInterface",
 		"middlewareInInterface",
 		"tests",
 	}
+
 	Perm = 0755
 
+	InternalLayer = "internal"
 	ModelsLayer   = "models"
 	DomainLayer   = "domain"
 	WebLayer      = "web"
 	RepoLayer     = "repositories"
 	ServicesLayer = "services"
 
-	InsfratuctureLayer = "infrastructure"
-	UtilsLayer         = "utils"
-	DatabaseLayer      = "database"
-	EnvLayer           = "environments"
+	PackageLayer  = "pkg"
+	UtilsLayer    = "utils"
+	DatabaseLayer = "database"
+	EnvLayer      = "environments"
 
 	InterfaceLayer  = "interface"
 	ControllerLayer = "controller"
@@ -51,20 +53,20 @@ var (
 
 	TestLayer = "tests"
 
-	Domain = map[string]interface{}{
-		"domain":                   fmt.Sprintf("%s/%s", helpers.GetWorkingDirectory(), DomainLayer),
-		"modelsInDomain":           fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), DomainLayer, ModelsLayer),
-		"domainInDomain":           fmt.Sprintf("%s/%s/%s/%s", helpers.GetWorkingDirectory(), DomainLayer, ModelsLayer, DomainLayer),
-		"webInDomain":              fmt.Sprintf("%s/%s/%s/%s", helpers.GetWorkingDirectory(), DomainLayer, ModelsLayer, WebLayer),
-		"repoInDomain":             fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), DomainLayer, RepoLayer),
-		"usecaseInDomain":          fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), DomainLayer, ServicesLayer),
-		"infrastucture":            fmt.Sprintf("%s/%s", helpers.GetWorkingDirectory(), InsfratuctureLayer),
-		"utilsInInfrastucture":     fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InsfratuctureLayer, UtilsLayer),
-		"databaseInInfrastructure": fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InsfratuctureLayer, DatabaseLayer),
-		"envInInfrastructure":      fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InsfratuctureLayer, EnvLayer),
-		"interface":                fmt.Sprintf("%s/%s", helpers.GetWorkingDirectory(), InterfaceLayer),
-		"controllerInInterface":    fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InterfaceLayer, ControllerLayer),
-		"middlewareInInterface":    fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InterfaceLayer, MiddlewareLayer),
-		"tests":                    fmt.Sprintf("%s/%s", helpers.GetWorkingDirectory(), TestLayer),
+	Domain = map[string]string{
+		"domain":                fmt.Sprintf("%s/%s", helpers.GetWorkingDirectory(), InternalLayer),
+		"modelsInDomain":        fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InternalLayer, ModelsLayer),
+		"domainInDomain":        fmt.Sprintf("%s/%s/%s/%s", helpers.GetWorkingDirectory(), InternalLayer, ModelsLayer, DomainLayer),
+		"webInDomain":           fmt.Sprintf("%s/%s/%s/%s", helpers.GetWorkingDirectory(), InternalLayer, ModelsLayer, WebLayer),
+		"repoInDomain":          fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InternalLayer, RepoLayer),
+		"usecaseInDomain":       fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InternalLayer, ServicesLayer),
+		"package":               fmt.Sprintf("%s/%s", helpers.GetWorkingDirectory(), PackageLayer),
+		"utilsInPackage":        fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), PackageLayer, UtilsLayer),
+		"databaseInPackage":     fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), PackageLayer, DatabaseLayer),
+		"envInPackage":          fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), PackageLayer, EnvLayer),
+		"interface":             fmt.Sprintf("%s/%s", helpers.GetWorkingDirectory(), InterfaceLayer),
+		"controllerInInterface": fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InterfaceLayer, ControllerLayer),
+		"middlewareInInterface": fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InterfaceLayer, MiddlewareLayer),
+		"tests":                 fmt.Sprintf("%s/%s", helpers.GetWorkingDirectory(), TestLayer),
 	}
 )
