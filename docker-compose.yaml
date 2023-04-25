@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-# this for testing!
-=======
-# this is for testing!
->>>>>>> edit/utils
 version: "3.8"
 
 services:
   go-start:
-<<<<<<< HEAD
-   container_name: go-start
-   image: "go-start:2.0.0"
-   restart: on-failure
-   depends_on: 
-   - mysql_db
-   build:
-    context: "."
-    dockerfile: Dockerfile
-   environment:
-=======
     container_name: go-start
     image: "go-start:2.0.0"
     restart: on-failure
@@ -28,7 +12,6 @@ services:
       context: "."
       dockerfile: Dockerfile
     environment:
->>>>>>> edit/utils
       DB_DRIVER: mysql
       DB_AUTH_USERNAME: root
       DB_AUTH_PASSWORD: root
