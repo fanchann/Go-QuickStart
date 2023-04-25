@@ -2,7 +2,6 @@ package files
 
 import (
 	"flag"
-	"fmt"
 	"os"
 
 	"github.com/mitchellh/colorstring"
@@ -36,7 +35,6 @@ func GenerateLayer() {
 	defer newWrite.CreateFile(files)
 
 	for _, layered := range layer.DomainKeys {
-		fmt.Println(layer.Domain[layered])
 		newWrite.CreateFolderProject(layer.Domain[layered].(string), layer.Perm)
 	}
 }
