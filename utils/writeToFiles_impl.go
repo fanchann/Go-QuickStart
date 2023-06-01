@@ -1,14 +1,15 @@
 package utils
 
 import (
-	"Go-QuickStart/entity/layer"
-	"Go-QuickStart/utils/helpers"
 	"bytes"
 	"fmt"
 	"io/fs"
 	"os"
 	"path/filepath"
 	"text/template"
+
+	"github.com/fanchann/Go-QuickStart/entity/layer"
+	"github.com/fanchann/Go-QuickStart/utils/helpers"
 )
 
 type WriteToFiles struct{}

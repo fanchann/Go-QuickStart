@@ -1,6 +1,6 @@
 package utils
 
-import "Go-QuickStart/entity/layer"
+import "github.com/fanchann/Go-QuickStart/entity/layer"
 
 type IWriteToFiles interface {
 	CreateFile(format []layer.FileSpec)

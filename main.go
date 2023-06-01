@@ -1,9 +1,9 @@
 package main
 
 import (
-	"Go-QuickStart/entity/files"
-
 	"github.com/mitchellh/colorstring"
+
+	"github.com/fanchann/Go-QuickStart/entity/files"
 )
 
 func main() {
