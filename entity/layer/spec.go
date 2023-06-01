@@ -1,8 +1,9 @@
 package layer
 
 import (
-	"Go-QuickStart/utils/helpers"
 	"fmt"
+
+	"Go-QuickStart/utils/helpers"
 )
 
 type (
@@ -22,11 +23,11 @@ var (
 		"domainInDomain",
 		"webInDomain",
 		"repoInDomain",
-		"usecaseInDomain",
+		"serviceInDomain",
 		"package",
 		"utilsInPackage",
 		"databaseInPackage",
-		"envInPackage",
+		"configInPackage",
 		"interface",
 		"controllerInInterface",
 		"middlewareInInterface",
@@ -45,7 +46,7 @@ var (
 	PackageLayer  = "pkg"
 	UtilsLayer    = "utils"
 	DatabaseLayer = "database"
-	EnvLayer      = "environments"
+	ConfigLayer   = "config"
 
 	InterfaceLayer  = "interface"
 	ControllerLayer = "controller"
@@ -59,11 +60,11 @@ var (
 		"domainInDomain":        fmt.Sprintf("%s/%s/%s/%s", helpers.GetWorkingDirectory(), InternalLayer, ModelsLayer, DomainLayer),
 		"webInDomain":           fmt.Sprintf("%s/%s/%s/%s", helpers.GetWorkingDirectory(), InternalLayer, ModelsLayer, WebLayer),
 		"repoInDomain":          fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InternalLayer, RepoLayer),
-		"usecaseInDomain":       fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InternalLayer, ServicesLayer),
+		"serviceInDomain":       fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InternalLayer, ServicesLayer),
 		"package":               fmt.Sprintf("%s/%s", helpers.GetWorkingDirectory(), PackageLayer),
 		"utilsInPackage":        fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), PackageLayer, UtilsLayer),
 		"databaseInPackage":     fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), PackageLayer, DatabaseLayer),
-		"envInPackage":          fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), PackageLayer, EnvLayer),
+		"configInPackage":       fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), PackageLayer, ConfigLayer),
 		"interface":             fmt.Sprintf("%s/%s", helpers.GetWorkingDirectory(), InterfaceLayer),
 		"controllerInInterface": fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InterfaceLayer, ControllerLayer),
 		"middlewareInInterface": fmt.Sprintf("%s/%s/%s", helpers.GetWorkingDirectory(), InterfaceLayer, MiddlewareLayer),

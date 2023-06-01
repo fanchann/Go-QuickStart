@@ -26,8 +26,9 @@ func GenerateLayer() {
 		{Location: layer.Domain["utilsInPackage"] + "/", PackageName: *packageName, ScCode: codes.UtilsError, FileName: "error.go"},
 		{Location: helpers.GetWorkingDirectory(), PackageName: *packageName, GoVersion: helpers.GetGoVersion(), ScCode: codes.GoMod, FileName: "go.mod"},
 		{Location: helpers.GetWorkingDirectory(), PackageName: *packageName, ScCode: codes.GoSum, FileName: "go.sum"},
-		{Location: layer.Domain["envInPackage"] + "/", PackageName: *packageName, ScCode: codes.EnvVariable, FileName: "database.go"},
+		{Location: layer.Domain["configInPackage"] + "/", PackageName: *packageName, ScCode: codes.ConfigGo, FileName: "config.go"},
 		{Location: helpers.GetWorkingDirectory(), PackageName: "", ScCode: codes.Readme, FileName: "README.md"},
+		{Location: helpers.GetWorkingDirectory(), PackageName: "", ScCode: codes.EnvConfiguration, FileName: ".env"},
 		{Location: helpers.GetWorkingDirectory(), PackageName: *packageName, ScCode: codes.MainCode, FileName: "main.go"},
 	}
 
