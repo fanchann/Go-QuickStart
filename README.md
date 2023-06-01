@@ -20,6 +20,7 @@ export DB_URL=<database url>
 export DB_PORT=<database port>
 ```
 ### Example
+
 ```
 export DB_DRIVER=mysql
 export DB_AUTH_USERNAME=root
