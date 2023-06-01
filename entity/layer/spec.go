@@ -3,7 +3,7 @@ package layer
 import (
 	"fmt"
 
-	"Go-QuickStart/utils/helpers"
+	"github.com/Go-QuickStart/utils/helpers"
 )
 
 type (
