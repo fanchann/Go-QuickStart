@@ -4,9 +4,10 @@ const (
 	MainCode = `package main
 
 import (
+	"fmt"
+
 	"{{.PackageName}}/pkg/database"
 	"{{.PackageName}}/pkg/utils"
-	"fmt"
 )
 	
 func main() {
@@ -17,6 +18,6 @@ func main() {
 	
 	//success
 	fmt.Println("Success connected to database")
-	}
+}
 `
 )

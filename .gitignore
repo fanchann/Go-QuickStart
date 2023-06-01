@@ -1,3 +1,5 @@
 bin
-tests
+test
 .idea
+Dockerfile
+docker-compose.yaml
