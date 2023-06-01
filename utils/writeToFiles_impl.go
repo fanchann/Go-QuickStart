@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"text/template"
 
-	"github.com/Go-QuickStart/entity/layer"
-	"github.com/Go-QuickStart/utils/helpers"
+	"github.com/fanchann/Go-QuickStart/entity/layer"
+	"github.com/fanchann/Go-QuickStart/utils/helpers"
 )
 
 type WriteToFiles struct{}

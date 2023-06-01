@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/mitchellh/colorstring"
 
-	"github.com/Go-QuickStart/entity/files"
+	"github.com/fanchann/Go-QuickStart/entity/files"
 )
 
 func main() {

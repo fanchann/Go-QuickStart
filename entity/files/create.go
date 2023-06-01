@@ -6,10 +6,10 @@ import (
 
 	"github.com/mitchellh/colorstring"
 
-	"github.com/Go-QuickStart/entity/codes"
-	"github.com/Go-QuickStart/entity/layer"
-	"github.com/Go-QuickStart/utils"
-	"github.com/Go-QuickStart/utils/helpers"
+	"github.com/fanchann/Go-QuickStart/entity/codes"
+	"github.com/fanchann/Go-QuickStart/entity/layer"
+	"github.com/fanchann/Go-QuickStart/utils"
+	"github.com/fanchann/Go-QuickStart/utils/helpers"
 )
 
 func GenerateLayer() {

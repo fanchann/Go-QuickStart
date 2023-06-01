@@ -1,4 +1,4 @@
-module github.com/Go-QuickStart
+module github.com/fanchann/Go-QuickStart
 
 go 1.20
 
