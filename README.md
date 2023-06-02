@@ -1,59 +1,90 @@
-## Go QuickStart v 2.0
-Speed up to create your REST API!\
-This tool is to help you create REST API faster, you don't need to  manually configure the connection to the database anymore.\
-start with `Go-QuickStart -pkg=awesomeProject` and see a miracle come out
-
+## Go QuickStart v2.0.3
+Accelerate the development of your REST API!\
+This cutting-edge tool empowers you to swiftly generate a blazing-fast REST API without the hassle of manual database configuration.\
+Kickstart with `Go-QuickStart -pkg=awesomeProject` and behold the extraordinary results unfold before your eyes.
 ## Installation
 `go install github.com/fanchann/Go-QuickStart`
 
 ## Configuration
 Set your environment variable
-### Linux
-`this tool is still the same as the previous version, still using mysql, maybe in xxxxx version will adopt some database`
+#### Open .env to configuration
 ```
-export DB_DRIVER=mysql
-export DB_AUTH_USERNAME=<your username here>
-export DB_AUTH_PASSWORD=<your password here>
-export DB_NAME=<database target>
-export DB_URL=<database url>
-export DB_PORT=<database port>
+DB_DRIVER=mysql
+DB_AUTH_USERNAME=<your username here>
+DB_AUTH_PASSWORD=<your password here>
+DB_NAME=<database target>
+DB_URL=<database url>
+DB_PORT=<database port>
 ```
-### Example
 
+#### Example
 ```
-export DB_DRIVER=mysql
-export DB_AUTH_USERNAME=root
-export DB_AUTH_PASSWORD=root
-export DB_NAME=local_production
-export DB_URL=127.0.0.1
-export DB_PORT=3306
+DB_DRIVER=mysql
+DB_AUTH_USERNAME=root
+DB_AUTH_PASSWORD=root
+DB_NAME=local_production
+DB_URL=127.0.0.1
+DB_PORT=3306
 ```
-## Structure folder
+## Project Structure
 ```
 .
-|-- README.md
-|-- go.mod
-|-- go.sum
-|-- interface
-|   |-- controller
-|   `-- middleware
-|-- internal
-|   |-- models
-|   |   |-- domain
-|   |   `-- web
-|   |-- repositories
-|   `-- services
-|-- main.go
-|-- pkg
-|   |-- database
-|   |   `-- mysql.go
-|   |-- environments
-|   |   `-- database.go
-|   `-- utils
-|       `-- error.go
-`-- tests
+├── .env
+├── go.mod
+├── go.sum
+├── interface
+│   ├── controller
+│   └── middleware
+├── internal
+│   ├── models
+│   │   ├── domain
+│   │   └── web
+│   ├── repositories
+│   └── services
+├── main.go
+├── pkg
+│   ├── config
+│   │   └── config.go
+│   ├── database
+│   │   └── mysql.go
+│   └── utils
+│       └── error.go
+├── README.md
+└── tests
+
 
 ```
 
+# Explanation for each layer in the Go-QuickStart structure:
+
+#### Interface
+Contains the sub-layers "controller" and "middleware".
+
+*   Controller\
+Handles user's HTTP requests and connects them to the application logic.
+*   Middleware\
+Adds additional features like authentication, authorization, logging, etc.
+
+#### Internal
+Contains the sub-layers "models", "repositories", and "services".
+
+*   Models\
+Provides definitions for the data structures used in the application.
+*   Repositories\
+Interacts with the data storage, such as a database.
+*   Services\
+Provides the business logic of the application.
+
+#### Pkg 
+Contains utilities, configuration files, and connections to external resources.
+*   Config\
+Application configuration files.
+*   Database\
+Implementation of the database connection.
+*   Utils\
+Common utilities used in the application.
+
+#### Tests
+Contains unit tests or automated tests to ensure the functionality of the application
 
 ## Thanks !

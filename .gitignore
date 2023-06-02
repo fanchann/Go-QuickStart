@@ -1,6 +1,5 @@
 bin
-test
+test/
 .idea
 Dockerfile
 docker-compose.yaml
-dist/
