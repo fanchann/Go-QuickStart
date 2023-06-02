@@ -10,16 +10,6 @@ Set your environment variable
 #### Open .env to configuration
 ```
 DB_DRIVER=mysql
-DB_AUTH_USERNAME=<your username here>
-DB_AUTH_PASSWORD=<your password here>
-DB_NAME=<database target>
-DB_URL=<database url>
-DB_PORT=<database port>
-```
-
-#### Example
-```
-DB_DRIVER=mysql
 DB_AUTH_USERNAME=root
 DB_AUTH_PASSWORD=root
 DB_NAME=local_production
