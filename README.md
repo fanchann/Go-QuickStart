@@ -1,11 +1,10 @@
 ## Go QuickStart v 2.0
 Speed up to create your REST API!\
 This tool is to help you create REST API faster, you don't need to  manually configure the connection to the database anymore.\
-start with `go-start -pkg=awesomeProject` and see a miracle come out
+start with `Go-QuickStart -pkg=awesomeProject` and see a miracle come out
 
 ## Installation
-for linux:\
-`git clone https://github.com/fanchann/Go-QuickStart && cd Go-QuickStart && go build -o bin/go-start main.go && sudo mv bin/go-start /bin`
+`go install github.com/fanchann/Go-QuickStart`
 
 ## Configuration
 Set your environment variable
@@ -20,6 +19,7 @@ export DB_URL=<database url>
 export DB_PORT=<database port>
 ```
 ### Example
+
 ```
 export DB_DRIVER=mysql
 export DB_AUTH_USERNAME=root
