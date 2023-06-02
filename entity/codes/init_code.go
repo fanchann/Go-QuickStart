@@ -19,4 +19,4 @@ github.com/joho/godotenv v1.5.1/go.mod h1:f4LDr5Voq0i2e/R5DDNOoa2zzDfwtkZa6DnEwA
 `
 )
 
-var Readme = fmt.Sprintf("# Read This\n- if you have not installed _mysql_ driver\\\n```go get -u github.com/go-sql-driver/mysql ```\n# Configuration\n#### Open .env to configuration\n```\nDB_DRIVER=mysql\nDB_AUTH_USERNAME=<your username here>\nDB_AUTH_PASSWORD=<your password here>\nDB_NAME=<database target>\nDB_URL=<database url>\nDB_PORT=<database port>\n```\n\n#### Example\n```\nDB_DRIVER=mysql\nDB_AUTH_USERNAME=root\nDB_AUTH_PASSWORD=root\nDB_NAME=local_production\nDB_URL=127.0.0.1\nDB_PORT=3306\n```\nhappy coding with MySQL and Go!\n")
+var Readme = fmt.Sprintf("# Read This\n- add package with\\\n```go mod download```\n# Configuration\n#### Open .env to configuration\n```\nDB_DRIVER=mysql\nDB_AUTH_USERNAME=<your username here>\nDB_AUTH_PASSWORD=<your password here>\nDB_NAME=<database target>\nDB_URL=<database url>\nDB_PORT=<database port>\n```\n\n#### Example\n```\nDB_DRIVER=mysql\nDB_AUTH_USERNAME=root\nDB_AUTH_PASSWORD=root\nDB_NAME=local_production\nDB_URL=127.0.0.1\nDB_PORT=3306\n```\nhappy coding with MySQL and Go!\n")
